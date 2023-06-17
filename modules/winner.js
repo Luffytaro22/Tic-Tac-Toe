@@ -14,12 +14,12 @@ function combinationsWithoutRepetition(arr) {
 
     const currentSet = new Set(current);
 
-    for (let i = 0; i < remaining.length; i++) {
+    for (let i = 0; i < remaining.length; i += 1) {
       const next = current.concat([remaining[i]]);
 
       // Verificar si el elemento ya ha sido utilizado en combinaciones anteriores
       if (!currentSet.has(remaining[i])) {
-        generateCombinations(next, remaining, level + 1); // Llamada recursiva con el siguiente nivel
+        generateCombinations(next, remaining, level + 1); // Llamada recursiva
       }
     }
   }
@@ -37,7 +37,6 @@ const comb6 = combinationsWithoutRepetition([[1, 2], [2, 2], [3, 2]]);// Second 
 const comb7 = combinationsWithoutRepetition([[1, 3], [2, 3], [3, 3]]);// Third column.
 const combs = [comb1, comb2, comb3, comb4, comb5, comb6, comb7, comb8];
 
-
 export default function displayWinner() {
   for (let j = 0; j < combs.length; j += 1) {
     for (let i = 0; i < combs[j].length; i += 1) {
@@ -47,7 +46,7 @@ export default function displayWinner() {
         // To each div assign the selected choice.
         divs.forEach((div) => div.removeEventListener('click', game));
         return 'Player1 Wins!';
-      } else if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
+      } if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
         // Select the created divs.
         const divs = document.querySelectorAll('.celds');
         // To each div assign the selected choice.

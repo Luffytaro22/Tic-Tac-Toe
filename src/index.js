@@ -2,11 +2,10 @@ import './styles.css';
 import displayGameboard from '../modules/gameboard.js';
 import { selectPlayer } from '../modules/selectPlayer.js';
 import { selectOptionO, selectOptionX } from '../modules/selectOption.js';
-import game from '../modules/game.js';
 import displayWinner from '../modules/winner.js';
 import { players } from '../modules/players.js';
 
-//require('../modules/selectOption.js');
+// require('../modules/selectOption.js');
 
 const chooseX = document.getElementById('x');
 const chooseO = document.getElementById('o');
@@ -21,7 +20,8 @@ displayGameboard();
 chooseX.addEventListener('click', selectOptionX);
 chooseO.addEventListener('click', selectOptionO);
 
-let player1X, player1O, player2X, player2O;
+let player1X; let player1O; let player2X; let
+  player2O;
 setInterval(() => {
   player1X = players.player1.X.length;
   player1O = players.player1.O.length;

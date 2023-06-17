@@ -1,4 +1,4 @@
-let players = {
+export const players = {
   player1: {
     X: [],
     O: [],
@@ -10,5 +10,3 @@ let players = {
     choice: '',
   },
 };
-
-export { players };

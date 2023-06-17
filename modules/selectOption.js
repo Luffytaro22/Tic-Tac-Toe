@@ -1,4 +1,4 @@
-import { players } from './players';
+import { players } from './players.js';
 import game from './game.js';
 
 function selectOptionX() {

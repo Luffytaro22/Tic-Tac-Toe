@@ -1,9 +1,8 @@
-import { player } from './selectPlayer.js';
+import { player, selectPlayer } from './selectPlayer.js';
 import { players } from './players.js';
-import { selectPlayer } from './selectPlayer.js';
 
 export default function game(event) {
-  let choose = players[`${player}`].choice;
+  const choose = players[`${player}`].choice;
   // If the div is not empty, return.
   if (event.target.textContent) return;
   // If it's empty then assign it the selected choice.
