@@ -17,15 +17,9 @@ selectPlayer();
 // Display the gameboard.
 displayGameboard();
 
-// Select the created divs.
-const divs = document.querySelectorAll('.celds');
-
 // Adds listeners to the option selected.
 chooseX.addEventListener('click', selectOptionX);
 chooseO.addEventListener('click', selectOptionO);
-
-// To each div assign the selected choice.
-divs.forEach((div) => div.addEventListener('click', game));
 
 setInterval(() => {
   let player1X = players.player1.X.length;
