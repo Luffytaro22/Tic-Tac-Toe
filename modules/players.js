@@ -1,10 +1,10 @@
 export let players = {
   player1: {
-    x: [],
-    o: [],
+    X: [],
+    O: [],
   },
   player2: {
-    x: [],
-    o: [],
+    X: [],
+    O: [],
   },
 };
