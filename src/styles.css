@@ -1,0 +1,23 @@
+.celds {
+  border: 1px solid black;
+}
+
+#selection-container.hide {
+  display: none;
+}
+
+#gameboard-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+#selection-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#selection-container h4:hover {
+  cursor: pointer;
+}
