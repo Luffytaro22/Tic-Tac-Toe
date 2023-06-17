@@ -21,13 +21,13 @@ displayGameboard();
 chooseX.addEventListener('click', selectOptionX);
 chooseO.addEventListener('click', selectOptionO);
 
+let player1X, player1O, player2X, player2O;
 setInterval(() => {
-  let player1X = players.player1.X.length;
-  let player1O = players.player1.O.length;
-  let player2X = players.player2.X.length;
-  let player2O = players.player2.O.length;
-
+  player1X = players.player1.X.length;
+  player1O = players.player1.O.length;
+  player2X = players.player2.X.length;
+  player2O = players.player2.O.length;
   if ((player1X || player1O) >= 3 || (player2X || player2O) >= 3) {
     winner.textContent = displayWinner();
   }
-}, 1000);
+}, 10);
