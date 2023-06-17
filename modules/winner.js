@@ -40,9 +40,9 @@ const combs = [comb1, comb2, comb3, comb4, comb5, comb6, comb7, comb8];
 export default function displayWinner() {
   for (let j = 0; j < combs.length; j += 1) {
     for (let i = 0; i < combs[j].length; i += 1) {
-      if ((players.player1.X || players.player1.O) === combs[j][i]) {
+      if ((`${players.player1.X}` || `${players.player1.O}`) === `${combs[j][i]}`) {
         return 'Player1 Wins!';
-      } else if ((players.player2.X || players.player2.O) === combs[j][i]) {
+      } else if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
         return 'Player2 Wins!';
       }
     }
