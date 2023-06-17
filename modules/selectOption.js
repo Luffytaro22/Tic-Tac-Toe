@@ -1,12 +1,17 @@
-import { player } from './selectPlayer.js';
+import { players } from '../modules/players.js';
 
-let choice;
 function selectOptionX() {
-  choice = 'X';
+  const seleContainer = document.getElementById('selection-container');
+  players.player1.choice = 'X';
+  players.player2.choice = 'O';
+  seleContainer.classList.add('hide');
 }
 
 function selectOptionO() {
-  choice = 'O';
+  const seleContainer = document.getElementById('selection-container');
+  players.player1.choice = 'O';
+  players.player2.choice = 'X';
+  seleContainer.classList.add('hide');
 }
 
-export { choice, selectOptionO, selectOptionX };
+export { selectOptionO, selectOptionX };
