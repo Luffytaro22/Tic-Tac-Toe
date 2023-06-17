@@ -1,4 +1,5 @@
 import { players } from './players.js';
+import game from './game.js';
 
 // Function to generate combinations without repetition.
 function combinationsWithoutRepetition(arr) {
@@ -41,8 +42,16 @@ export default function displayWinner() {
   for (let j = 0; j < combs.length; j += 1) {
     for (let i = 0; i < combs[j].length; i += 1) {
       if ((`${players.player1.X}` || `${players.player1.O}`) === `${combs[j][i]}`) {
+        // Select the created divs.
+        const divs = document.querySelectorAll('.celds');
+        // To each div assign the selected choice.
+        divs.forEach((div) => div.removeEventListener('click', game));
         return 'Player1 Wins!';
       } else if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
+        // Select the created divs.
+        const divs = document.querySelectorAll('.celds');
+        // To each div assign the selected choice.
+        divs.forEach((div) => div.removeEventListener('click', game));
         return 'Player2 Wins!';
       }
     }
