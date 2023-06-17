@@ -2,7 +2,7 @@ import { player } from './selectPlayer.js';
 
 let choice;
 function selectOptionX() {
-  choice = 'x';
+  choice = 'X';
 }
 
 function selectOptionO() {
