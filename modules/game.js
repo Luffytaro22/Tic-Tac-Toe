@@ -1,12 +1,14 @@
 import { player } from './selectPlayer.js';
-import { choice } from './selectOption.js';
 import { players } from './players.js';
+import { selectPlayer } from './selectPlayer.js';
 
 export default function game(event) {
+  let choose = players[`${player}`].choice;
   // If the div is not empty, return.
-  if (!event.target.textContent) return;
+  if (event.target.textContent) return;
   // If it's empty then assign it the selected choice.
-  event.target.textContent = choice;
+  event.target.textContent = choose;
   // To the selected player and the selected choice, add the position fo the div.
-  players[`${player}`][`${choice}`].push(JSON.parse(event.target.id));
+  players[`${player}`][`${choose}`].push(JSON.parse(event.target.id));
+  selectPlayer();
 }
