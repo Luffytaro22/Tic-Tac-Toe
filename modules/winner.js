@@ -39,13 +39,13 @@ const combs = [comb1, comb2, comb3, comb4, comb5, comb6, comb7, comb8];
 export default function displayWinner() {
   for (let j = 0; j < combs.length; j += 1) {
     for (let i = 0; i < combs[j].length; i += 1) {
-      if ((`${players.player1.X}` || `${players.player1.O}`) === `${combs[j][i]}`) {
+      if ((`${players.get().player1.X}` || `${players.get().player1.O}`) === `${combs[j][i]}`) {
         const score1 = document.querySelector('.players:first-child .score');
         const player1 = document.querySelector('.players:first-child p');
         let increase = JSON.parse(score1.textContent) + 1;
         score1.textContent = `${increase}`;
         return `${player1.textContent} wins this round!`;
-      } if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
+      } if ((`${players.get().player2.X}` || `${players.get().player2.O}`) === `${combs[j][i]}`) {
         const score2 = document.querySelector('.players:last-child .score');
         const player2 = document.querySelector('.players:last-child p');
         let increase = JSON.parse(score2.textContent) + 1;

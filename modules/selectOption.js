@@ -4,11 +4,11 @@ import game from './game.js';
 export default function selectOption(event) {
   const seleContainer = document.getElementById('selection-container');
   if (event.target.id === 'x') {
-    players.player1.choice = 'X';
-    players.player2.choice = 'O';
+    players.get().player1.choice = 'X';
+    players.get().player2.choice = 'O';
   } else {
-    players.player1.choice = 'O';
-    players.player2.choice = 'X';
+    players.get().player1.choice = 'O';
+    players.get().player2.choice = 'X';
   }
   seleContainer.classList.add('hide');
   // Select the created divs.

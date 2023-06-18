@@ -11,6 +11,10 @@ body {
   align-items: center;
 }
 
+.player-turn {
+  background-color: aqua;
+}
+
 .pop-up {
   position: fixed;
   z-index: 999;
@@ -22,6 +26,7 @@ body {
 }
 
 #selection-container.hide,
+#gameboard-container.hide,
 .hide {
   display: none;
 }
