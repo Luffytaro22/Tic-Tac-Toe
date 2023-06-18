@@ -11,6 +11,7 @@ import game from "../modules/game";
 const chooseX = document.getElementById('x');
 const chooseO = document.getElementById('o');
 const winner = document.querySelector('#div-winner h5');
+const winnerDiv = document.getElementById('div-winner');
 // Ads the default player 1 to the span.
 selectPlayer();
 
@@ -24,7 +25,7 @@ chooseO.addEventListener('click', selectOption);
 const divs = document.querySelectorAll('.celds');
 let player1X; let player1O; let player2X; let
   player2O;
-setInterval(() => {
+const interval = setInterval(() => {
   player1X = players.player1.X.length;
   player1O = players.player1.O.length;
   player2X = players.player2.X.length;
@@ -32,10 +33,20 @@ setInterval(() => {
   if (((player1X || player1O) === 3) || ((player2X || player2O) === 3)) {
     if (displayWinner()) {
       winner.textContent = displayWinner();
+      winnerDiv.classList.add('pop-up');
       divs.forEach((div) => div.removeEventListener('click', game));
+      clearInterval(interval);
     }
   } else if ((player1X || player1O) >= 4 || (player2X || player2O) >= 4) {
     winner.textContent = "It's a draw!";
+    winnerDiv.classList.add('pop-up');
     divs.forEach((div) => div.removeEventListener('click', game));
+    clearInterval(interval);
   }
 }, 100);
+
+window.addEventListener('click', (event) => {
+  if (!event.target.contains(winnerDiv)) {
+    winnerDiv.classList.remove('pop-up');
+  }
+});
