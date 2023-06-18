@@ -1,4 +1,4 @@
-export const players = {
+let _players = {
   player1: {
     X: [],
     O: [],
@@ -8,5 +8,14 @@ export const players = {
     X: [],
     O: [],
     choice: '',
+  },
+};
+
+export let players = {
+  get() {
+    return _players;
+  },
+  set(newPlayers) {
+    _players = newPlayers;
   },
 };
