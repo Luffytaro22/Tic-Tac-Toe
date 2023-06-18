@@ -1,15 +1,18 @@
 let player = '';
 function selectPlayer() {
-  const span = document.getElementById('player-number');
-  if (span.textContent === '') {
+  const player1 = document.querySelector('.players:first-child');
+  const player2 = document.querySelector('.players:last-child');
+  if (!player1.classList.contains('player-turn') && !player2.classList.contains('player-turn')) {
     player = 'player1';
-    span.textContent = '1';
-  } else if (span.textContent === '1') {
+    player1.classList.add('player-turn');
+  } else if (player1.classList.contains('player-turn')) {
     player = 'player2';
-    span.textContent = '2';
+    player1.classList.remove('player-turn');
+    player2.classList.add('player-turn');
   } else {
     player = 'player1';
-    span.textContent = '1';
+    player2.classList.remove('player-turn');
+    player1.classList.add('player-turn');
   }
 }
 
