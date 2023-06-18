@@ -20,14 +20,13 @@ const divPlayers = document.getElementById('players');
 enterIcon.addEventListener('click', () => {
   if (inputNick.value !== '') {
     addPlayer();
+    inputNick.value = '';
     if (divPlayers.childElementCount === 2) {
       hide();
+      selectPlayer();
     }
   }
 });
-
-// Ads the default player 1 to the span.
-selectPlayer();
 
 // Display the gameboard.
 displayGameboard();
