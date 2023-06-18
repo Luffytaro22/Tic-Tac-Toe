@@ -40,9 +40,17 @@ export default function displayWinner() {
   for (let j = 0; j < combs.length; j += 1) {
     for (let i = 0; i < combs[j].length; i += 1) {
       if ((`${players.player1.X}` || `${players.player1.O}`) === `${combs[j][i]}`) {
-        return 'Player1 Wins!';
+        const score1 = document.querySelector('.score:first-child');
+        const player1 = document.querySelector('.players p:first-child');
+        let increase = JSON.parse(score1.textContent) + 1;
+        score1.textContent = `${increase}`;
+        return `${player1.textContent} wins this round!`;
       } if ((`${players.player2.X}` || `${players.player2.O}`) === `${combs[j][i]}`) {
-        return 'Player2 Wins!';
+        const score2 = document.querySelector('.score:last-child');
+        const player2 = document.querySelector('.players p:last-child');
+        let increase = JSON.parse(score2.textContent) + 1;
+        score2.textContent = `${increase}`;
+        return `${player2.textContent} wins this round!`;
       }
     }
   }
