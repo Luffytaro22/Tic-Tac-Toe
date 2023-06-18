@@ -46,7 +46,7 @@ const interval = setInterval(() => {
 }, 100);
 
 window.addEventListener('click', (event) => {
-  if (!event.target.contains(winnerDiv)) {
+  if (!winnerDiv.contains(event.target)) {
     winnerDiv.classList.remove('pop-up');
   }
 });
