@@ -1,5 +1,4 @@
 import { players } from './players.js';
-import game from './game.js';
 
 // Function to generate combinations without repetition.
 function combinationsWithoutRepetition(arr) {
