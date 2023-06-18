@@ -5,13 +5,27 @@ import selectOption from '../modules/selectOption.js';
 import displayWinner from '../modules/winner.js';
 import { players } from '../modules/players.js';
 import game from '../modules/game.js';
+import addPlayer from '../modules/addPlayer.js';
+import hide from '../modules/hide.js';
 
-// require('../modules/selectOption.js');
 
 const chooseX = document.getElementById('x');
 const chooseO = document.getElementById('o');
 const winner = document.querySelector('#div-winner h5');
 const winnerDiv = document.getElementById('div-winner');
+const enterIcon = document.getElementById('enter-icon');
+const inputNick = document.getElementById('nickname');
+const divPlayers = document.getElementById('players');
+
+enterIcon.addEventListener('click', () => {
+  if (inputNick.value !== '') {
+    addPlayer();
+    if (divPlayers.childElementCount === 2) {
+      hide();
+    }
+  }
+});
+
 // Ads the default player 1 to the span.
 selectPlayer();
 
