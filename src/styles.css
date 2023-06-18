@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.celds {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-turn {
+  background-color: aqua;
+}
+
+.pop-up {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 30%;
+  width: 50%;
+  background-color: gray;
+  text-align: center;
+}
+
+#selection-container.hide,
+#gameboard-container.hide,
+.hide {
+  display: none;
+}
+
+#gameboard-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+#selection-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#selection-container h4:hover {
+  cursor: pointer;
+}
+
+#players {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.players {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
