@@ -11,7 +11,7 @@ export default function addPlayer() {
   span.classList.add('score');
 
   // Append elements.
-  p.textContent = inputNick.value;
+  p.textContent = inputNick.value.trim();
   span.textContent = '0';
   container.appendChild(p);
   container.appendChild(span);
