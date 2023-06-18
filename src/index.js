@@ -1,10 +1,10 @@
 import './styles.css';
 import displayGameboard from '../modules/gameboard.js';
 import { selectPlayer } from '../modules/selectPlayer.js';
-import { selectOption } from '../modules/selectOption.js';
+import selectOption from '../modules/selectOption.js';
 import displayWinner from '../modules/winner.js';
 import { players } from '../modules/players.js';
-import game from "../modules/game";
+import game from '../modules/game.js';
 
 // require('../modules/selectOption.js');
 

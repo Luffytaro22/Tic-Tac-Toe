@@ -1,7 +1,7 @@
 import { players } from './players.js';
 import game from './game.js';
 
-function selectOption(event) {
+export default function selectOption(event) {
   const seleContainer = document.getElementById('selection-container');
   if (event.target.id === 'x') {
     players.player1.choice = 'X';
@@ -16,5 +16,3 @@ function selectOption(event) {
   // To each div assign the selected choice.
   divs.forEach((div) => div.addEventListener('click', game));
 }
-
-export { selectOption };
