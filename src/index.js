@@ -9,7 +9,6 @@ import addPlayer from '../modules/addPlayer.js';
 import hide from '../modules/hide.js';
 import refresh from '../modules/refresh.js';
 
-
 const chooseX = document.getElementById('x');
 const chooseO = document.getElementById('o');
 const winner = document.querySelector('#div-winner h5');

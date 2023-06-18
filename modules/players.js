@@ -1,4 +1,4 @@
-let _players = {
+let Players = {
   player1: {
     X: [],
     O: [],
@@ -11,11 +11,11 @@ let _players = {
   },
 };
 
-export let players = {
+export const players = {
   get() {
-    return _players;
+    return Players;
   },
   set(newPlayers) {
-    _players = newPlayers;
+    Players = newPlayers;
   },
 };
