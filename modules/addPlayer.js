@@ -12,6 +12,7 @@ export default function addPlayer() {
 
   // Append elements.
   p.textContent = inputNick.value;
+  span.textContent = '0';
   container.appendChild(p);
   container.appendChild(span);
   divPlayers.appendChild(container);
