@@ -20,6 +20,7 @@ export default function refresh() {
   divs.forEach((div) => {
     div.addEventListener('click', game);
     div.textContent = '';
+    div.classList.remove('animation');
   });
   divWinner.classList.add('hide');
 }
