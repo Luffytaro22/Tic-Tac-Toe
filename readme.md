@@ -25,9 +25,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do List <a name="about-project"></a>
+# 📖 Tic Tac Toe <a name="about-project"></a>
 
-**To Do List** allows the user to enter a task and mark it as completed or not. It also lets removing the done tasks and save them in the local storage.
+**Tic Tac Toe** allows two people to register and play against each other in the world-wide popular game.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,7 +42,7 @@
 
 ### Key Features <a name="key-features"></a>
 * Use of Modules.
-* Local Storage information.
+* 3-in-a-row or draw logic.
 * Javascript's dynamics.
 * Use of Webpack.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -51,7 +51,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://luffytaro22.github.io/To-do-list/)
+- [Live Demo](https://luffytaro22.github.io/Tic-Tac-Toe/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,17 +76,27 @@ This will download all this dependencies: <br>
 
 * Install Webpack-dev-server <br>
 `npm install --save-dev webpack-dev-server`
+* Install Jest <br>
+`npm install --save-dev jest`
+* Install Webhint <br>
+`npm install --save-dev hint@7.x`
+* Install Stylelint <br>
+`npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x`
+* Install ESLint <br>
+`npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x`
+* Install Babel <br>
+`npm install --save-dev babel-jest @babel/core @babel/preset-env`
 
 
 ### Setup
 * Clone this repository to your desired folder: <br>
-`git clone git@github.com:Luffytaro22/To-do-list.git`
+`git@github.com:Luffytaro22/Tic-Tac-Toe.git`
 
 * Initialize it with <br>
 `npm start`
 
 ### Deployment
-You can deploy the project with [this link](https://luffytaro22.github.io/To-do-list/)
+You can deploy the project with [this link](https://luffytaro22.github.io/Tic-Tac-Toe/dist/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -106,10 +116,8 @@ You can deploy the project with [this link](https://luffytaro22.github.io/To-do-
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-* More Styles.
 * More Animations.
-* Remove Tasks.
-* Change the position of the tasks.
+* Improve 3-in-a-row logic.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
