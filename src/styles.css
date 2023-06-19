@@ -1,32 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h4:first-child {
+  border-right: 1px solid black;
+  padding-right: 50px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #c9c9b4;
+  font-family: 'Noto Sans Japanese', sans-serif;
+  font-size: 1.2em;
+  animation-name: body;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes body {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animation {
+  animation-name: celds;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes celds {
+  from {
+    font-size: 0;
+  }
+
+  to {
+    font-size: 2em;
+  }
+}
+
+#players-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#nickname {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background: none;
+  font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+#options-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  border: 1px solid black;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px 50px;
 }
 
 .celds {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2em;
+}
+
+.celds:hover,
+#enter-icon:hover {
+  cursor: pointer;
+}
+
+.celds:not(:nth-child(7), :nth-child(8), :nth-child(9)) {
+  border-bottom: 2px solid black;
+}
+
+.celds:not(:nth-child(3), :nth-child(6), :nth-child(9)) {
+  border-right: 2px solid black;
 }
 
 .player-turn {
-  background-color: aqua;
+  background-color: #fdfdfd;
+  border: 1px solid black;
+  animation-name: player-turn;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  box-shadow: 0 0 5px 3px #930d29;
+}
+
+@keyframes player-turn {
+  from {
+    box-shadow: 0 0 5px 3px #930d29;
+    transform: scale(0);
+  }
+
+  to {
+    box-shadow: 0 0 5px 5px #930d29;
+    transform: scale(1);
+  }
 }
 
 .pop-up {
   position: fixed;
   z-index: 999;
-  top: 50%;
-  left: 30%;
   width: 50%;
+  max-width: 280px;
   background-color: gray;
   text-align: center;
 }
 
 #selection-container.hide,
 #gameboard-container.hide,
+#players-container.hide,
+#div-winner.hide,
 .hide {
   display: none;
 }
@@ -39,8 +141,11 @@ body {
 
 #selection-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  margin-bottom: 60px;
+  gap: 30px;
 }
 
 #selection-container h4:hover {
@@ -60,4 +165,43 @@ body {
   align-items: center;
   padding: 10px 20px;
   border-radius: 20px;
+}
+
+#div-winner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  animation-name: pop-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  padding: 20px 30px;
+  background-color: #d08702;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#refresh-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+}
+
+#refresh-button:hover {
+  cursor: pointer;
+  background-color: #c9c9b4;
+  border: 1px solid beige;
+}
+
+@keyframes pop-up {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }

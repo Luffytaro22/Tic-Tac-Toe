@@ -8,6 +8,13 @@ import game from '../modules/game.js';
 import addPlayer from '../modules/addPlayer.js';
 import hide from '../modules/hide.js';
 import refresh from '../modules/refresh.js';
+import webIcon from './assets/tic-tac-toe.png';
+
+const link = document.createElement('link');
+link.href = webIcon;
+link.rel = 'icon';
+const head = document.querySelector('head');
+head.appendChild(link);
 
 const chooseX = document.getElementById('x');
 const chooseO = document.getElementById('o');
@@ -60,11 +67,11 @@ function initializeGame() {
     }
   }, 100);
 
-  window.addEventListener('click', (event) => {
+  /* window.addEventListener('click', (event) => {
     if (!winnerDiv.contains(event.target)) {
       winnerDiv.classList.remove('pop-up');
     }
-  });
+  }); */
 }
 initializeGame();
 
