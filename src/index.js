@@ -67,11 +67,11 @@ function initializeGame() {
     }
   }, 100);
 
-  /*window.addEventListener('click', (event) => {
+  /* window.addEventListener('click', (event) => {
     if (!winnerDiv.contains(event.target)) {
       winnerDiv.classList.remove('pop-up');
     }
-  });*/
+  }); */
 }
 initializeGame();
 
