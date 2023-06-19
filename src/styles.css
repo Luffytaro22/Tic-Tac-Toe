@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #c9c9b4;
+  font-family: 'Noto Sans Japanese', sans-serif;
+  font-size: 1.2em;
+}
+
+#players-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#nickname {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background: none;
+  font-family: 'Noto Sans Japanese', sans-serif;
 }
 
 .celds {
@@ -12,21 +34,36 @@ body {
 }
 
 .player-turn {
-  background-color: aqua;
+  background-color: #fdfdfd;
+  border: 1px dashed black;
+  animation-name: player-turn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes player-turn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 .pop-up {
   position: fixed;
   z-index: 999;
-  top: 50%;
-  left: 30%;
   width: 50%;
+  max-width: 280px;
   background-color: gray;
   text-align: center;
 }
 
 #selection-container.hide,
 #gameboard-container.hide,
+#players-container.hide,
+#div-winner.hide,
 .hide {
   display: none;
 }
@@ -60,4 +97,42 @@ body {
   align-items: center;
   padding: 10px 20px;
   border-radius: 20px;
+}
+
+#div-winner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-name: pop-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  padding: 20px 30px;
+  background-color: #d08702;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#refresh-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+}
+
+#refresh-button:hover {
+  cursor: pointer;
+  background-color: #c9c9b4;
+  border: 1px solid beige;
+}
+
+@keyframes pop-up {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
