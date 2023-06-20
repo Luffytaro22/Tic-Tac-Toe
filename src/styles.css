@@ -7,7 +7,11 @@
 
 h4:first-child {
   border-right: 1px solid black;
-  padding-right: 50px;
+  padding-right: 25px;
+}
+
+h4:last-child {
+  padding-left: 25px;
 }
 
 body {
@@ -53,7 +57,9 @@ body {
 #players-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+  margin-top: 30px;
 }
 
 #nickname {
@@ -63,16 +69,16 @@ body {
   border: 1px solid black;
   background: none;
   font-family: 'Noto Sans Japanese', sans-serif;
+  width: 33%;
 }
 
 #options-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
   border: 1px solid black;
   width: 100px;
   border-radius: 10px;
-  padding: 10px 50px;
+  padding: 10px 25px;
 }
 
 .celds {
